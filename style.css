@@ -1,0 +1,443 @@
+
+/* =============================================
+   1. PENGATURAN DASAR
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f3f4f4;
+    color: #292929;
+    line-height: 1.6;
+}
+
+
+/* =============================================
+   2. HEADER / PROFIL
+   ============================================= */
+
+.hero {
+    background-color: #4f9caf;
+    color: white;
+    text-align: center;
+    padding: 40px 25px 30px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    margin: 0 8px;
+    font-weight: 300;
+}
+
+.hero p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =============================================
+   3. BAGIAN KONTAK
+   ============================================= */
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background-color: #292929;
+    color: white;
+    padding: 20px 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-item span {
+    font-size: 22px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =============================================
+   4. CONTAINER UTAMA
+   ============================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+}
+
+
+/* =============================================
+   5. BAGIAN SECTION
+   ============================================= */
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h2 {
+    color: #222;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+/* =============================================
+   6. TIMELINE PENDIDIKAN DAN ORGANISASI
+   ============================================= */
+
+.timeline {
+    margin-left: 25px;
+    padding-left: 35px;
+    border-left: 2px solid #d8d8d8;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Titik timeline */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 7px;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+}
+
+.timeline-item h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.subtitle span {
+    margin: 0 5px;
+}
+
+.description {
+    color: #777;
+    font-size: 13px;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.timeline-item li {
+    margin-bottom: 2px;
+}
+
+.timeline-item li::marker {
+    color: #657d73;
+}
+
+
+/* =============================================
+   7. BAGIAN KETERAMPILAN
+   ============================================= */
+
+/* Judul keterampilan */
+.skill-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+/* Susunan software */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Kotak software */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #333;
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+/* Efek hover */
+.skill-item:hover {
+    border-color: #657d73;
+    background-color: #f8faf9;
+}
+
+/* Logo software */
+.skill-logo {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+
+/* =============================================
+   8. BAGIAN PORTFOLIO
+   ============================================= */
+
+/* Susunan portfolio 3 kolom */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+/* Kartu portfolio */
+.portfolio-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+    border-radius: 8px;
+    background-color: white;
+
+    transition: transform 0.2s;
+}
+
+/* Efek hover */
+.portfolio-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Gambar portfolio */
+.portfolio-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+}
+
+/* Informasi portfolio */
+.portfolio-info {
+    padding: 12px 0;
+}
+
+.portfolio-info h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =============================================
+   9. FOOTER WEBSITE
+   ============================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #292929;
+    color: white;
+    padding: 25px 40px;
+    font-size: 13px;
+}
+
+/* Ikon sosial media */
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #777;
+    border-radius: 50%;
+
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social a:hover {
+    background-color: #4f9caf;
+    border-color: #4f9caf;
+}
+
+
+/* =============================================
+   10. RESPONSIVE TABLET
+   ============================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding: 30px;
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portfolio-card img {
+        height: 180px;
+    }
+}
+
+
+/* =============================================
+   11. RESPONSIVE HP
+   ============================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    /* Kontak */
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 25px;
+    }
+
+    /* Konten utama */
+    .container {
+        padding: 25px 20px;
+    }
+
+    /* Judul section */
+    .section h2 {
+        font-size: 21px;
+    }
+
+    /* Timeline */
+    .timeline {
+        margin-left: 15px;
+        padding-left: 25px;
+    }
+
+    .timeline-item::before {
+        left: -33px;
+    }
+
+    /* Keterampilan */
+    .skills {
+        gap: 10px;
+    }
+
+    .skill-item {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    /* Portfolio 1 kolom */
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-card img {
+        height: 220px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 25px;
+    }
+}
